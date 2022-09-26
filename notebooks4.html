@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>NAIVE BAYES CLASSIFIER &#8212; My sample book</title>
+    <title>NAIVE BAYES CLASSIFIER (Tugas 4 revisi) &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -129,7 +129,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   NAIVE BAYES CLASSIFIER
+   NAIVE BAYES CLASSIFIER (Tugas 4 revisi)
   </a>
  </li>
 </ul>
@@ -352,7 +352,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NAIVE BAYES CLASSIFIER</h1>
+                <h1>NAIVE BAYES CLASSIFIER (Tugas 4 revisi)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -377,8 +377,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="naive-bayes-classifier">
-<h1>NAIVE BAYES CLASSIFIER<a class="headerlink" href="#naive-bayes-classifier" title="Permalink to this headline">#</a></h1>
+  <section id="naive-bayes-classifier-tugas-4-revisi">
+<h1>NAIVE BAYES CLASSIFIER (Tugas 4 revisi)<a class="headerlink" href="#naive-bayes-classifier-tugas-4-revisi" title="Permalink to this headline">#</a></h1>
 <blockquote>
 <div><p>Naïve Bayes Classifier merupakan sebuah metoda klasifikasi yang berakar pada teorema Bayes . Metode pengklasifikasian dg menggunakan metode probabilitas dan statistik yg dikemukakan oleh ilmuwan Inggris Thomas Bayes , yaitu memprediksi peluang di masa depan berdasarkan pengalaman di masa sebelumnya sehingga dikenal sebagai Teorema Bayes . Ciri utama dr Naïve Bayes Classifier ini adalah asumsi yg sangat kuat (naïf) akan independensi dari masing-masing kondisi / kejadian.</p>
 </div></blockquote>
@@ -399,128 +399,7 @@ title="Print to PDF"
 <p>IMPORT IRIS DATASET</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/RagilSalsabil/dataset/main/Iris.csv?token=GHSAT0AAAAAABYKLGTSRHBOPJPUSKT6RMYEYZRXDSQ&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">HTTPError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">68</span><span class="n">b94da6c9a4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/RagilSalsabil/dataset/main/Iris.csv?token=GHSAT0AAAAAABYKLGTSRHBOPJPUSKT6RMYEYZRXDSQ&#39;</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> 
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> 
-<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> 
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
-<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span>             <span class="n">memory_map</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span>             <span class="n">storage_options</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="ne">--&gt; </span><span class="mi">229</span>             <span class="n">errors</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span>         <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">614</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">615</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">616</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>         <span class="c1"># assuming storage_options is to be interpreted as headers</span>
-<span class="g g-Whitespace">    </span><span class="mi">311</span>         <span class="n">req_info</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">312</span>         <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req_info</span><span class="p">)</span> <span class="k">as</span> <span class="n">req</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">313</span>             <span class="n">content_encoding</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span>             <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>     <span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span> 
-<span class="ne">--&gt; </span><span class="mi">212</span>     <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">213</span> 
-<span class="g g-Whitespace">    </span><span class="mi">214</span> 
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
-<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span> 
-<span class="g g-Whitespace">    </span><span class="mi">224</span> <span class="k">def</span> <span class="nf">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">):</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span>         <span class="k">for</span> <span class="n">processor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="p">[]):</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>             <span class="n">meth</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">processor</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="n">response</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> 
-<span class="g g-Whitespace">    </span><span class="mi">533</span>         <span class="k">return</span> <span class="n">response</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">http_response</span><span class="nt">(self, request, response)</span>
-<span class="g g-Whitespace">    </span><span class="mi">639</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">640</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">641</span>                 <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span> 
-<span class="g g-Whitespace">    </span><span class="mi">643</span>         <span class="k">return</span> <span class="n">response</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span>         <span class="k">if</span> <span class="n">http_err</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
-<span class="ne">--&gt; </span><span class="mi">569</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span> 
-<span class="g g-Whitespace">    </span><span class="mi">571</span> <span class="c1"># XXX probably also want an abstract factory that knows when it makes</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">501</span>         <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">503</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">504</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">505</span>                 <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span> <span class="k">class</span> <span class="nc">HTTPDefaultErrorHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>     <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">649</span>         <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span> 
-<span class="g g-Whitespace">    </span><span class="mi">651</span> <span class="k">class</span> <span class="nc">HTTPRedirectHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
-
-<span class="ne">HTTPError</span>: HTTP Error 404: Not Found
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -534,7 +413,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3857dd02-caff-4eb2-9a7f-48d77ea3310d">
+  <div id="df-6cdaf151-5979-49a2-9840-62efdfdc7a5b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -554,199 +433,178 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Id</th>
-      <th>SepalLengthCm</th>
-      <th>SepalWidthCm</th>
-      <th>PetalLengthCm</th>
-      <th>PetalWidthCm</th>
-      <th>Species</th>
+      <th>sepal.length</th>
+      <th>sepal.width</th>
+      <th>petal.length</th>
+      <th>petal.width</th>
+      <th>variety</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
       <td>5.1</td>
       <td>3.5</td>
       <td>1.4</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
       <td>4.9</td>
       <td>3.0</td>
       <td>1.4</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
       <td>4.7</td>
       <td>3.2</td>
       <td>1.3</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
       <td>4.6</td>
       <td>3.1</td>
       <td>1.5</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
       <td>5.0</td>
       <td>3.6</td>
       <td>1.4</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>6</td>
       <td>5.4</td>
       <td>3.9</td>
       <td>1.7</td>
       <td>0.4</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>7</td>
       <td>4.6</td>
       <td>3.4</td>
       <td>1.4</td>
       <td>0.3</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>8</td>
       <td>5.0</td>
       <td>3.4</td>
       <td>1.5</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>9</td>
       <td>4.4</td>
       <td>2.9</td>
       <td>1.4</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>10</td>
       <td>4.9</td>
       <td>3.1</td>
       <td>1.5</td>
       <td>0.1</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>11</td>
       <td>5.4</td>
       <td>3.7</td>
       <td>1.5</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>12</td>
       <td>4.8</td>
       <td>3.4</td>
       <td>1.6</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>13</td>
       <td>4.8</td>
       <td>3.0</td>
       <td>1.4</td>
       <td>0.1</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>14</td>
       <td>4.3</td>
       <td>3.0</td>
       <td>1.1</td>
       <td>0.1</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>15</td>
       <td>5.8</td>
       <td>4.0</td>
       <td>1.2</td>
       <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>16</td>
       <td>5.7</td>
       <td>4.4</td>
       <td>1.5</td>
       <td>0.4</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>17</td>
       <td>5.4</td>
       <td>3.9</td>
       <td>1.3</td>
       <td>0.4</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>18</td>
       <td>5.1</td>
       <td>3.5</td>
       <td>1.4</td>
       <td>0.3</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>19</td>
       <td>5.7</td>
       <td>3.8</td>
       <td>1.7</td>
       <td>0.3</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>20</td>
       <td>5.1</td>
       <td>3.8</td>
       <td>1.5</td>
       <td>0.3</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3857dd02-caff-4eb2-9a7f-48d77ea3310d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6cdaf151-5979-49a2-9840-62efdfdc7a5b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -797,12 +655,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-3857dd02-caff-4eb2-9a7f-48d77ea3310d button.colab-df-convert');
+          document.querySelector('#df-6cdaf151-5979-49a2-9840-62efdfdc7a5b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3857dd02-caff-4eb2-9a7f-48d77ea3310d');
+          const element = document.querySelector('#df-6cdaf151-5979-49a2-9840-62efdfdc7a5b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -825,12 +683,12 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;variety&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;], dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Setosa&#39;, &#39;Versicolor&#39;, &#39;Virginica&#39;], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -843,7 +701,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a32ed1fb-e693-4e16-8f8b-dacfdf46c23f">
+  <div id="df-87dfa0d0-01cb-4aa8-876e-4402168dbde6">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -863,18 +721,16 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Id</th>
-      <th>SepalLengthCm</th>
-      <th>SepalWidthCm</th>
-      <th>PetalLengthCm</th>
-      <th>PetalWidthCm</th>
-      <th>Species</th>
+      <th>sepal.length</th>
+      <th>sepal.width</th>
+      <th>petal.length</th>
+      <th>petal.width</th>
+      <th>variety</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>count</th>
-      <td>150.000000</td>
       <td>150.000000</td>
       <td>150.000000</td>
       <td>150.000000</td>
@@ -887,7 +743,6 @@ title="Print to PDF"
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
       <td>3</td>
     </tr>
     <tr>
@@ -896,12 +751,10 @@ title="Print to PDF"
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>Iris-setosa</td>
+      <td>Setosa</td>
     </tr>
     <tr>
       <th>freq</th>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -910,25 +763,22 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>mean</th>
-      <td>75.500000</td>
       <td>5.843333</td>
-      <td>3.054000</td>
-      <td>3.758667</td>
-      <td>1.198667</td>
+      <td>3.057333</td>
+      <td>3.758000</td>
+      <td>1.199333</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>43.445368</td>
       <td>0.828066</td>
-      <td>0.433594</td>
-      <td>1.764420</td>
-      <td>0.763161</td>
+      <td>0.435866</td>
+      <td>1.765298</td>
+      <td>0.762238</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>4.300000</td>
       <td>2.000000</td>
       <td>1.000000</td>
@@ -937,7 +787,6 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>25%</th>
-      <td>38.250000</td>
       <td>5.100000</td>
       <td>2.800000</td>
       <td>1.600000</td>
@@ -946,7 +795,6 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>50%</th>
-      <td>75.500000</td>
       <td>5.800000</td>
       <td>3.000000</td>
       <td>4.350000</td>
@@ -955,7 +803,6 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>75%</th>
-      <td>112.750000</td>
       <td>6.400000</td>
       <td>3.300000</td>
       <td>5.100000</td>
@@ -964,7 +811,6 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>max</th>
-      <td>150.000000</td>
       <td>7.900000</td>
       <td>4.400000</td>
       <td>6.900000</td>
@@ -974,7 +820,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a32ed1fb-e693-4e16-8f8b-dacfdf46c23f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-87dfa0d0-01cb-4aa8-876e-4402168dbde6')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1025,12 +871,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a32ed1fb-e693-4e16-8f8b-dacfdf46c23f button.colab-df-convert');
+          document.querySelector('#df-87dfa0d0-01cb-4aa8-876e-4402168dbde6 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a32ed1fb-e693-4e16-8f8b-dacfdf46c23f');
+          const element = document.querySelector('#df-87dfa0d0-01cb-4aa8-876e-4402168dbde6');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1060,25 +906,16 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 150 entries, 0 to 149
-Data columns (total 6 columns):
- #   Column         Non-Null Count  Dtype  
----  ------         --------------  -----  
- 0   Id             150 non-null    int64  
- 1   SepalLengthCm  150 non-null    float64
- 2   SepalWidthCm   150 non-null    float64
- 3   PetalLengthCm  150 non-null    float64
- 4   PetalWidthCm   150 non-null    float64
- 5   Species        150 non-null    object 
-dtypes: float64(4), int64(1), object(1)
-memory usage: 7.2+ KB
-</pre></div>
-</div>
-</div>
-</div>
-<p>MENGHAPUS KOLOM YANG TIDAK DIGUNAKAN</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Id&quot;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+Data columns (total 5 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   sepal.length  150 non-null    float64
+ 1   sepal.width   150 non-null    float64
+ 2   petal.length  150 non-null    float64
+ 3   petal.width   150 non-null    float64
+ 4   variety       150 non-null    object 
+dtypes: float64(4), object(1)
+memory usage: 6.0+ KB
 </pre></div>
 </div>
 </div>
@@ -1091,11 +928,11 @@ memory usage: 7.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SepalLengthCm    0
-SepalWidthCm     0
-PetalLengthCm    0
-PetalWidthCm     0
-Species          0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sepal.length    0
+sepal.width     0
+petal.length    0
+petal.width     0
+variety         0
 dtype: int64
 </pre></div>
 </div>
@@ -1396,7 +1233,7 @@ f1-score_DecisionTree : 0.978
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-17941d58-e2a6-4d06-9e99-06a15c0bfb0c">
+  <div id="df-7f7ab619-9762-44c9-b427-ae3e2d298b41">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1461,7 +1298,7 @@ f1-score_DecisionTree : 0.978
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-17941d58-e2a6-4d06-9e99-06a15c0bfb0c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7f7ab619-9762-44c9-b427-ae3e2d298b41')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1512,12 +1349,12 @@ f1-score_DecisionTree : 0.978
 
       <script>
         const buttonEl =
-          document.querySelector('#df-17941d58-e2a6-4d06-9e99-06a15c0bfb0c button.colab-df-convert');
+          document.querySelector('#df-7f7ab619-9762-44c9-b427-ae3e2d298b41 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-17941d58-e2a6-4d06-9e99-06a15c0bfb0c');
+          const element = document.querySelector('#df-7f7ab619-9762-44c9-b427-ae3e2d298b41');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
