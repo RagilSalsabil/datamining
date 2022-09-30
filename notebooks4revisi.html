@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="K-NN Algorithm (Tugas 3)" href="notebooks3.html" />
@@ -114,7 +112,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TUGAS DATA MINING
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks1%262.html">
    <strong>
@@ -191,7 +194,25 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://drive.google.com/file/d/16b9q-TpCdzfu7TGEN3RbZL-SLQPlwD0x/view?usp=sharing/github/executablebooks/jupyter-book/blob/master/docs/notebooks4revisi.ipynb"
+        <a href="https://mybinder.org/v2/gh/RagilSalsabil/datamining/gh-pages?urlpath=tree/_sources/notebooks4revisi.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/RagilSalsabil/datamining/blob/gh-pages/_sources/notebooks4revisi.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -234,7 +255,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/RagilSalsabil/datamining"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -251,7 +272,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks4revisi.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/RagilSalsabil/datamining/issues/new?title=Issue%20on%20page%20%2Fnotebooks4revisi.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,36 +337,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rumus">
-   Rumus
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -357,19 +354,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rumus">
-   Rumus
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -377,15 +361,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="naive-bayes-classifier-tugas-4-revisi">
+  <section class="tex2jax_ignore mathjax_ignore" id="naive-bayes-classifier-tugas-4-revisi">
 <h1>NAIVE BAYES CLASSIFIER (Tugas 4 revisi)<a class="headerlink" href="#naive-bayes-classifier-tugas-4-revisi" title="Permalink to this headline">#</a></h1>
-<blockquote>
-<div><p>Naïve Bayes Classifier merupakan sebuah metoda klasifikasi yang berakar pada teorema Bayes . Metode pengklasifikasian dg menggunakan metode probabilitas dan statistik yg dikemukakan oleh ilmuwan Inggris Thomas Bayes , yaitu memprediksi peluang di masa depan berdasarkan pengalaman di masa sebelumnya sehingga dikenal sebagai Teorema Bayes . Ciri utama dr Naïve Bayes Classifier ini adalah asumsi yg sangat kuat (naïf) akan independensi dari masing-masing kondisi / kejadian.</p>
-</div></blockquote>
-<section id="rumus">
-<h2>Rumus<a class="headerlink" href="#rumus" title="Permalink to this headline">#</a></h2>
-</section>
-<p><span class="math notranslate nohighlight">\( p\left ( class | data \right ) = \tfrac{p\left ( data |  class \right ).p\left ( class \right )}{p\left ( data \right )} \)</span></p>
+<p>Naïve Bayes Classifier merupakan sebuah metoda klasifikasi yang berakar pada teorema Bayes . Metode pengklasifikasian dg menggunakan metode probabilitas dan statistik yg dikemukakan oleh ilmuwan Inggris Thomas Bayes , yaitu memprediksi peluang di masa depan berdasarkan pengalaman di masa sebelumnya sehingga dikenal sebagai Teorema Bayes . Ciri utama dr Naïve Bayes Classifier ini adalah asumsi yg sangat kuat (naïf) akan independensi dari masing-masing kondisi / kejadian.</p>
+<p>Rumus</p>
+<p>$ p\left ( class | data \right ) = \tfrac{p\left ( data |  class \right ).p\left ( class \right )}{p\left ( data \right )} $</p>
 <p>IMPORT PANDAS, NUMPY, ADN SEABORN MODUL</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -413,7 +393,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6ba7efec-949f-49a7-8b93-2f4b9d4198d2">
+  <div id="df-fe106013-0006-4b55-8948-d629a88e80c3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -604,7 +584,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6ba7efec-949f-49a7-8b93-2f4b9d4198d2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-fe106013-0006-4b55-8948-d629a88e80c3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -655,12 +635,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6ba7efec-949f-49a7-8b93-2f4b9d4198d2 button.colab-df-convert');
+          document.querySelector('#df-fe106013-0006-4b55-8948-d629a88e80c3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6ba7efec-949f-49a7-8b93-2f4b9d4198d2');
+          const element = document.querySelector('#df-fe106013-0006-4b55-8948-d629a88e80c3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -701,7 +681,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cb51543d-d2dc-47da-9f5a-77c7f58f8abe">
+  <div id="df-75b52ab7-e8a1-40c8-b744-99008c0f7d2e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -820,7 +800,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cb51543d-d2dc-47da-9f5a-77c7f58f8abe')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-75b52ab7-e8a1-40c8-b744-99008c0f7d2e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -871,12 +851,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cb51543d-d2dc-47da-9f5a-77c7f58f8abe button.colab-df-convert');
+          document.querySelector('#df-75b52ab7-e8a1-40c8-b744-99008c0f7d2e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cb51543d-d2dc-47da-9f5a-77c7f58f8abe');
+          const element = document.querySelector('#df-75b52ab7-e8a1-40c8-b744-99008c0f7d2e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1233,7 +1213,7 @@ f1-score_DecisionTree : 0.978
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-427374a9-c37e-45f8-9a21-5283b6b17c23">
+  <div id="df-aa12a147-ff43-4e98-9d7d-0fabd50f241b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1298,7 +1278,7 @@ f1-score_DecisionTree : 0.978
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-427374a9-c37e-45f8-9a21-5283b6b17c23')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-aa12a147-ff43-4e98-9d7d-0fabd50f241b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1349,12 +1329,12 @@ f1-score_DecisionTree : 0.978
 
       <script>
         const buttonEl =
-          document.querySelector('#df-427374a9-c37e-45f8-9a21-5283b6b17c23 button.colab-df-convert');
+          document.querySelector('#df-aa12a147-ff43-4e98-9d7d-0fabd50f241b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-427374a9-c37e-45f8-9a21-5283b6b17c23');
+          const element = document.querySelector('#df-aa12a147-ff43-4e98-9d7d-0fabd50f241b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
