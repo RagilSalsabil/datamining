@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Studi Kasus Dataset Credit Score (Tugas 7)" href="notebooks7.html" />
     <link rel="prev" title="IMPLEMENTATION DECISION TREE (TUGAS 6)" href="notebooks6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -148,6 +149,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    IMPLEMENTASI METODE K-NN ALGORITHM DAN DECISION TREE (UTS)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks7.html">
+   Studi Kasus Dataset Credit Score (Tugas 7)
   </a>
  </li>
 </ul>
@@ -352,41 +358,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   IMPLEMENTASI METODE K-NN ALGORITHM DAN DECISION TREE (UTS)
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decision-tree">
-   DECISION TREE
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -398,24 +375,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   IMPLEMENTASI METODE K-NN ALGORITHM DAN DECISION TREE (UTS)
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decision-tree">
-   DECISION TREE
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -454,184 +413,127 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-01e14867-4309-4f51-acfb-766019c66f0c">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">HTTPError</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">c7cc1e7509ad</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/RagilSalsabil/datamining/gh-pages/dataR2.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span> 
+<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Age</th>
-      <th>BMI</th>
-      <th>Glucose</th>
-      <th>Insulin</th>
-      <th>HOMA</th>
-      <th>Leptin</th>
-      <th>Adiponectin</th>
-      <th>Resistin</th>
-      <th>MCP.1</th>
-      <th>Classification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>48</td>
-      <td>23.500000</td>
-      <td>70</td>
-      <td>2.707</td>
-      <td>0.467409</td>
-      <td>8.8071</td>
-      <td>9.702400</td>
-      <td>7.99585</td>
-      <td>417.114</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>83</td>
-      <td>20.690495</td>
-      <td>92</td>
-      <td>3.115</td>
-      <td>0.706897</td>
-      <td>8.8438</td>
-      <td>5.429285</td>
-      <td>4.06405</td>
-      <td>468.786</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>82</td>
-      <td>23.124670</td>
-      <td>91</td>
-      <td>4.498</td>
-      <td>1.009651</td>
-      <td>17.9393</td>
-      <td>22.432040</td>
-      <td>9.27715</td>
-      <td>554.697</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>68</td>
-      <td>21.367521</td>
-      <td>77</td>
-      <td>3.226</td>
-      <td>0.612725</td>
-      <td>9.8827</td>
-      <td>7.169560</td>
-      <td>12.76600</td>
-      <td>928.220</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>86</td>
-      <td>21.111111</td>
-      <td>92</td>
-      <td>3.549</td>
-      <td>0.805386</td>
-      <td>6.6994</td>
-      <td>4.819240</td>
-      <td>10.57635</td>
-      <td>773.920</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> 
+<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> 
+<span class="g g-Whitespace">    </span><span class="mi">588</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span> 
+<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span> 
+<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span> 
+<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span> 
+<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> 
+<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
+<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>             <span class="n">memory_map</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span>             <span class="n">storage_options</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="ne">--&gt; </span><span class="mi">229</span>             <span class="n">errors</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">612</span>         <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">613</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">614</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">615</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">616</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>         <span class="c1"># assuming storage_options is to be interpreted as headers</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span>         <span class="n">req_info</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">312</span>         <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req_info</span><span class="p">)</span> <span class="k">as</span> <span class="n">req</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">313</span>             <span class="n">content_encoding</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">314</span>             <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>     <span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="g g-Whitespace">    </span><span class="mi">211</span> 
+<span class="ne">--&gt; </span><span class="mi">212</span>     <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span> 
+<span class="g g-Whitespace">    </span><span class="mi">214</span> 
+
+<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span> 
+<span class="g g-Whitespace">    </span><span class="mi">224</span> <span class="k">def</span> <span class="nf">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">):</span>
+
+<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>         <span class="k">for</span> <span class="n">processor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="p">[]):</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span>             <span class="n">meth</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">processor</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="n">response</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span> 
+<span class="g g-Whitespace">    </span><span class="mi">533</span>         <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">http_response</span><span class="nt">(self, request, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">639</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">640</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">641</span>                 <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span> 
+<span class="g g-Whitespace">    </span><span class="mi">643</span>         <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span>         <span class="k">if</span> <span class="n">http_err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
+<span class="ne">--&gt; </span><span class="mi">569</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span> 
+<span class="g g-Whitespace">    </span><span class="mi">571</span> <span class="c1"># XXX probably also want an abstract factory that knows when it makes</span>
+
+<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>         <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">503</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>                 <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span> <span class="k">class</span> <span class="nc">HTTPDefaultErrorHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>     <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">649</span>         <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span> 
+<span class="g g-Whitespace">    </span><span class="mi">651</span> <span class="k">class</span> <span class="nc">HTTPRedirectHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+
+<span class="ne">HTTPError</span>: HTTP Error 404: Not Found
+</pre></div>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-01e14867-4309-4f51-acfb-766019c66f0c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-01e14867-4309-4f51-acfb-766019c66f0c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-01e14867-4309-4f51-acfb-766019c66f0c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-</div></div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -657,7 +559,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6429c7cb-fd99-4943-8271-4792d24a99ca">
+  <div id="df-66114967-1b6d-4df5-8561-96422e5a9a99">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -752,7 +654,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6429c7cb-fd99-4943-8271-4792d24a99ca')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-66114967-1b6d-4df5-8561-96422e5a9a99')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -803,12 +705,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6429c7cb-fd99-4943-8271-4792d24a99ca button.colab-df-convert');
+          document.querySelector('#df-66114967-1b6d-4df5-8561-96422e5a9a99 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6429c7cb-fd99-4943-8271-4792d24a99ca');
+          const element = document.querySelector('#df-66114967-1b6d-4df5-8561-96422e5a9a99');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -861,6 +763,9 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">116</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">()</span>
+
 <span class="c1"># create KNN classifier</span>
 <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
 
@@ -878,20 +783,6 @@ title="Print to PDF"
 <p>TESTING THE MODEL</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#show first 5 model predictions on the test data</span>
-<span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2,
-       2, 2])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check accuracy of our model on the test data</span>
 <span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 </pre></div>
@@ -903,9 +794,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="decision-tree">
-<h1>DECISION TREE<a class="headerlink" href="#decision-tree" title="Permalink to this headline">#</a></h1>
+<p>DECISION TREE</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
@@ -962,8 +851,8 @@ title="Print to PDF"
  Text(0.13636363636363635, 0.6428571428571429, &#39;X[7] &lt;= 3.281\ngini = 0.185\nsamples = 29\nvalue = [26, 3]&#39;),
  Text(0.09090909090909091, 0.5, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1]&#39;),
  Text(0.18181818181818182, 0.5, &#39;X[4] &lt;= 6.464\ngini = 0.133\nsamples = 28\nvalue = [26, 2]&#39;),
- Text(0.13636363636363635, 0.35714285714285715, &#39;X[6] &lt;= 3.986\ngini = 0.071\nsamples = 27\nvalue = [26, 1]&#39;),
- Text(0.09090909090909091, 0.21428571428571427, &#39;X[1] &lt;= 25.954\ngini = 0.444\nsamples = 3\nvalue = [2, 1]&#39;),
+ Text(0.13636363636363635, 0.35714285714285715, &#39;X[5] &lt;= 8.747\ngini = 0.071\nsamples = 27\nvalue = [26, 1]&#39;),
+ Text(0.09090909090909091, 0.21428571428571427, &#39;X[0] &lt;= 66.0\ngini = 0.444\nsamples = 3\nvalue = [2, 1]&#39;),
  Text(0.045454545454545456, 0.07142857142857142, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1]&#39;),
  Text(0.13636363636363635, 0.07142857142857142, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0]&#39;),
  Text(0.18181818181818182, 0.21428571428571427, &#39;gini = 0.0\nsamples = 24\nvalue = [24, 0]&#39;),
@@ -986,13 +875,13 @@ title="Print to PDF"
  Text(0.6818181818181818, 0.07142857142857142, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 2]&#39;),
  Text(0.7272727272727273, 0.21428571428571427, &#39;gini = 0.0\nsamples = 7\nvalue = [0, 7]&#39;),
  Text(0.9090909090909091, 0.5, &#39;X[7] &lt;= 10.109\ngini = 0.496\nsamples = 11\nvalue = [6, 5]&#39;),
- Text(0.8636363636363636, 0.35714285714285715, &#39;X[4] &lt;= 1.171\ngini = 0.278\nsamples = 6\nvalue = [1, 5]&#39;),
+ Text(0.8636363636363636, 0.35714285714285715, &#39;X[3] &lt;= 5.032\ngini = 0.278\nsamples = 6\nvalue = [1, 5]&#39;),
  Text(0.8181818181818182, 0.21428571428571427, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0]&#39;),
  Text(0.9090909090909091, 0.21428571428571427, &#39;gini = 0.0\nsamples = 5\nvalue = [0, 5]&#39;),
  Text(0.9545454545454546, 0.35714285714285715, &#39;gini = 0.0\nsamples = 5\nvalue = [5, 0]&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooksUts_22_1.png" src="_images/notebooksUts_22_1.png" />
+<img alt="_images/notebooksUts_21_1.png" src="_images/notebooksUts_21_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1003,7 +892,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebooksUts_23_0.png" src="_images/notebooksUts_23_0.png" />
+<img alt="_images/notebooksUts_22_0.png" src="_images/notebooksUts_22_0.png" />
 </div>
 </div>
 </section>
@@ -1041,6 +930,13 @@ title="Print to PDF"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">IMPLEMENTATION DECISION TREE (TUGAS 6)</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="notebooks7.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Studi Kasus Dataset Credit Score (Tugas 7)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
